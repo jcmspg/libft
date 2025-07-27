@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_print_percent.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joamiran <joamiran@student.42.fr>          +#+  +:+       +#+        */
+/*   By: joamiran <joamiran@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/08 19:34:48 by joamiran          #+#    #+#             */
-/*   Updated: 2024/10/02 23:05:15 by joamiran         ###   ########.fr       */
+/*   Created: 2024/05/06 19:47:00 by joamiran          #+#    #+#             */
+/*   Updated: 2024/12/11 17:38:21 by joamiran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int	ft_isalnum(int c)
+void	ft_print_percent(t_data *data)
 {
-	if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-	{
-		return (1);
-	}
-	else
-		return (0);
+	ft_write('%');
+	data->chars_printed++;
+}
+
+void	ft_print_percent_fd(t_data *data, int fd)
+{
+	ft_write_fd('%', fd);
+	data->chars_printed++;
 }

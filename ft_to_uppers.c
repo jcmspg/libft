@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_to_uppers.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joamiran <joamiran@student.42.fr>          +#+  +:+       +#+        */
+/*   By: joamiran <joamiran@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/08 19:34:48 by joamiran          #+#    #+#             */
-/*   Updated: 2024/10/02 23:05:15 by joamiran         ###   ########.fr       */
+/*   Created: 2024/05/07 23:32:36 by joamiran          #+#    #+#             */
+/*   Updated: 2024/11/22 17:24:20 by joamiran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int	ft_isalnum(int c)
+int	ft_toupper(int c)
 {
-	if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
+}
+
+void	ft_strtoupper(char *str)
+{
+	while (*str)
 	{
-		return (1);
+		*str = ft_toupper(*str);
+		str++;
 	}
-	else
-		return (0);
 }

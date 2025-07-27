@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joamiran <joamiran@student.42.fr>          +#+  +:+       +#+        */
+/*   By: joamiran <joamiran@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/08 14:21:44 by joamiran          #+#    #+#             */
-/*   Updated: 2024/10/02 23:04:54 by joamiran         ###   ########.fr       */
+/*   Created: 2024/10/14 21:14:13 by joamiran          #+#    #+#             */
+/*   Updated: 2024/12/11 17:38:08 by joamiran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+long	ft_atol(const char *str)
 {
 	size_t	i;
 	size_t	signal;
-	size_t	result;
+	long	result;
 
 	if (!str)
 		return (0);

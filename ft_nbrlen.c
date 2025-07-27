@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_nbrlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joamiran <joamiran@student.42.fr>          +#+  +:+       +#+        */
+/*   By: joamiran <joamiran@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/08 19:34:48 by joamiran          #+#    #+#             */
-/*   Updated: 2024/10/02 23:05:15 by joamiran         ###   ########.fr       */
+/*   Created: 2024/05/06 23:20:26 by joamiran          #+#    #+#             */
+/*   Updated: 2024/05/07 20:49:18 by joamiran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int	ft_isalnum(int c)
+int	ft_nbrlen(int n)
 {
-	if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+	int	len;
+
+	len = 1;
+	while (n)
 	{
-		return (1);
+		n /= 10;
+		if (n)
+			len++;
 	}
-	else
-		return (0);
+	return (len);
 }

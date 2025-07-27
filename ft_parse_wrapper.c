@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_parse_wrapper.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: joamiran <joamiran@student.42.fr>          +#+  +:+       +#+        */
+/*   By: joamiran <joamiran@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/08 19:34:48 by joamiran          #+#    #+#             */
-/*   Updated: 2024/10/02 23:05:15 by joamiran         ###   ########.fr       */
+/*   Created: 2024/05/07 15:24:47 by joamiran          #+#    #+#             */
+/*   Updated: 2024/05/07 20:49:27 by joamiran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int	ft_isalnum(int c)
+void	ft_parse_wrapper(t_data *data)
 {
-	if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-	{
-		return (1);
-	}
-	else
-		return (0);
+	ft_parse_flags(data);
+	ft_parse_width(data);
+	ft_parse_precision(data);
+	ft_parse_type(data);
+	ft_parse_base(data);
 }

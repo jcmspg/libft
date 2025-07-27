@@ -6,7 +6,7 @@
 /*   By: joamiran <joamiran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/11 17:25:38 by joamiran          #+#    #+#             */
-/*   Updated: 2024/04/15 18:23:00 by joamiran         ###   ########.fr       */
+/*   Updated: 2024/11/22 17:23:00 by joamiran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,24 +23,6 @@ NULL if the allocation fails.
 */
 
 // 1 calculate the length of the number
-
-static size_t	ft_nbrlen(long n)
-{
-	size_t	len;
-
-	len = 0;
-	if (n <= 0)
-	{
-		len++;
-		n *= -1;
-	}
-	while (n > 0)
-	{
-		n /= 10;
-		len++;
-	}
-	return (len);
-}
 
 char	*ft_itoa(int n)
 {

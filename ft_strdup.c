@@ -6,13 +6,13 @@
 /*   By: joamiran <joamiran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 14:37:51 by joamiran          #+#    #+#             */
-/*   Updated: 2024/04/12 17:39:48 by joamiran         ###   ########.fr       */
+/*   Updated: 2024/11/22 17:23:56 by joamiran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	*str_copy(char *src, char *dest)
+static char	*str_copy(const char *src, char *dest)
 {
 	int	i;
 
@@ -25,7 +25,7 @@ static char	*str_copy(char *src, char *dest)
 	return (dest);
 }
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	char	*copy;
 	int		len;
