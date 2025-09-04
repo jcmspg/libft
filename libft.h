@@ -6,7 +6,7 @@
 /*   By: joamiran <joamiran@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 16:29:09 by joamiran          #+#    #+#             */
-/*   Updated: 2024/12/11 17:39:16 by joamiran         ###   ########.fr       */
+/*   Updated: 2025/09/04 20:06:13 by joamiran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,11 @@
 # include <unistd.h>
 
 // Add your function prototypes here
+int                 ft_abs(int n);
+long                ft_labs(long n);
+double              ft_dabs(double n);
+float               ft_fabs(float n);
+
 
 // PART I
 int					ft_tolower(int c);

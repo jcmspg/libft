@@ -85,6 +85,7 @@ SRC_FILES = ft_printf.c\
 			ft_print_str.c\
 			ft_print_char.c\
 			ft_print_ptr.c\
+			ft_abs.c\
 
 # Convert source files to object files
 OBJ_FILES = $(addprefix $(OBJ_DIR)/, $(SRC_FILES:.c=.o))
